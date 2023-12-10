@@ -1,4 +1,4 @@
-package gocrypto
+package siphash
 
 import "github.com/dchest/siphash"
 
