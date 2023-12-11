@@ -12,7 +12,7 @@ type Options struct {
 	UID  uint32 `json:"uid"`  //鉴权用户的UID
 	Acct string `json:"acct"` //登录用户名或者鉴权 Identifier
 	Ut   string `json:"ut"`   //用户类型。//需要区分等级的时候才需要用到
-	Role string `json:"role"` //身份角色。"身份1,状态1|身份2,状态2"
+	Role string `json:"role"` //身份角色。" 身份1,状态1|身份2,状态2"
 	Pt   string `json:"pt"`   //patch
 	//jwtClaims jwt.StandardClaims
 	jwt.RegisteredClaims
@@ -76,12 +76,6 @@ func Issuer(issuer string) Option {
 		o.Issuer = issuer
 	}
 }
-
-// func App(app string) Option {
-// 	return func(o *Options) {
-// 		o.App = app
-// 	}
-// }
 
 // DefaultOptions default options
 func DefaultOptions() Options {
