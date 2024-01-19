@@ -22,7 +22,6 @@ func Encode(input string) ([]byte, string) {
 	for x.Cmp(zero) != 0 {
 		x.DivMod(x, base, mod)
 		result = append(result, baseBets[mod.Int64()])
-		//fmt.Println(result)
 	}
 	ReverseBytes(result)
 	return result, string(result)
